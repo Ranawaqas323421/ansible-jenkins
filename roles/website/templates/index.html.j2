@@ -144,6 +144,7 @@
       display: flex;
       align-items: center;
       gap: 14px;
+      margin-bottom: 28px;
     }
 
     .dot {
@@ -173,6 +174,28 @@
       text-shadow: 0 0 8px rgba(0, 255, 200, 0.4);
     }
 
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .contact a {
+      color: #67e8f9;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 16px;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .contact a:hover {
+      background: rgba(56, 189, 248, 0.15);
+      box-shadow: 0 0 14px rgba(56, 189, 248, 0.3);
+    }
+
     footer {
       margin-top: 32px;
       text-align: center;
@@ -180,6 +203,20 @@
       color: #475569;
       font-family: 'Consolas', 'Courier New', monospace;
       letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 28px;
+      }
+
+      h1 {
+        font-size: 1.9rem;
+      }
+
+      .about {
+        font-size: 0.88rem;
+      }
     }
   </style>
 </head>
@@ -212,6 +249,12 @@
       <span class="status-text">
         Database connected as <b>{{ mysql_user }}</b> to <b>myappdb</b>
       </span>
+    </div>
+
+    <div class="contact">
+      <a href="https://github.com/Ranawaqas323421" target="_blank">GitHub</a>
+      <a href="mailto:rw178722@gmail.com">Email</a>
+      <a href="https://hub.docker.com/u/waqas323421" target="_blank">Docker Hub</a>
     </div>
 
     <footer>Deployed via Ansible // Server: {{ inventory_hostname }}</footer>
