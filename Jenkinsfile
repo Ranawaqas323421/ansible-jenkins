@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/Umair1012/ansible-collections.git'
+                git branch: 'main', url: 'https://github.com/Ranawaqas323421/ansible-jenkins.git'
             }
         }
 
