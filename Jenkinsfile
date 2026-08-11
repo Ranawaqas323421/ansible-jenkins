@@ -8,13 +8,6 @@ pipeline {
             }
         }
 
-        stage('Prepare Key') {
-            steps {
-                sh 'cp /var/lib/jenkins/rana_waqas.pem .'
-                sh 'chmod 600 rana_waqas.pem'
-            }
-        }
-
         stage('Install Collections') {
             steps {
                 sh 'ansible-galaxy collection install -r requirements.yml'
@@ -23,10 +16,18 @@ pipeline {
 
         stage('Run Playbook') {
             steps {
-                sh '''
-                    ansible-playbook -i inventory/hosts site.yml \
-                      --private-key rana_waqas.pem
-                '''
+                withCredentials([
+                    sshUserPrivateKey(
+                        credentialsId: 'rana_waqas.pem',
+                        keyFileVariable: 'SSH_KEY',
+                        usernameVariable: 'SSH_USER'
+                    )
+                ]) {
+                    sh '''
+                        ansible-playbook -i inventory/hosts site.yml \
+                          --private-key "$SSH_KEY"
+                    '''
+                }
             }
         }
     }
