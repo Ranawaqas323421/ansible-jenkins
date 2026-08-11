@@ -10,7 +10,8 @@ pipeline {
 
         stage('Prepare Key') {
             steps {
-                sh 'cp /home/ubuntu/ansible-jenkins/rana_waqas.pem .'
+                sh 'cp /var/lib/jenkins/rana_waqas.pem .'
+                sh 'chmod 600 rana_waqas.pem'
             }
         }
 
@@ -23,8 +24,6 @@ pipeline {
         stage('Run Playbook') {
             steps {
                 sh '''
-                    chmod 600 rana_waqas.pem
-
                     ansible-playbook -i inventory/hosts site.yml \
                       --private-key rana_waqas.pem
                 '''
