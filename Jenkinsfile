@@ -8,6 +8,12 @@ pipeline {
             }
         }
 
+        stage('Prepare Key') {
+            steps {
+                sh 'cp /home/ubuntu/ansible-jenkins/rana_waqas.pem .'
+            }
+        }
+
         stage('Install Collections') {
             steps {
                 sh 'ansible-galaxy collection install -r requirements.yml'
