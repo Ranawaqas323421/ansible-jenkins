@@ -1,0 +1,4 @@
+mysql_root_pass: "SuperSecretRootPass"
+mysql_user: "appuser"
+mysql_password: "AppUserPass123"
+mysql_db: "myappdb"

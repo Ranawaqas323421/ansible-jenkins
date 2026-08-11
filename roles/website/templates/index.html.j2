@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waqas Saleem | DevOps Engineer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(0, 255, 200, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 85% 80%, rgba(139, 92, 246, 0.12) 0%, transparent 40%),
+        linear-gradient(135deg, #05060a 0%, #0b0f19 50%, #05060a 100%);
+      color: #e2e8f0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .container {
+      max-width: 720px;
+      width: 100%;
+      background: rgba(17, 24, 39, 0.55);
+      border: 1px solid rgba(0, 255, 200, 0.15);
+      border-radius: 20px;
+      padding: 44px;
+      box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.02),
+        0 20px 60px rgba(0, 0, 0, 0.6),
+        0 0 40px rgba(0, 255, 200, 0.05);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .container::before {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #00ffc8, #8b5cf6, transparent);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0, 255, 200, 0.08);
+      color: #00ffc8;
+      padding: 7px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+      border: 1px solid rgba(0, 255, 200, 0.3);
+      text-shadow: 0 0 12px rgba(0, 255, 200, 0.6);
+    }
+
+    .badge::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #00ffc8;
+      box-shadow: 0 0 8px #00ffc8;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #00ffc8, #8b5cf6, #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      color: #94a3b8;
+      font-size: 1rem;
+      margin-bottom: 32px;
+      font-family: 'Consolas', 'Courier New', monospace;
+    }
+
+    .subtitle::before {
+      content: "> ";
+      color: #00ffc8;
+    }
+
+    .about {
+      background: rgba(5, 8, 15, 0.6);
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-left: 3px solid #8b5cf6;
+      padding: 22px;
+      border-radius: 10px;
+      margin-bottom: 28px;
+      line-height: 1.8;
+      color: #cbd5e1;
+      font-size: 0.95rem;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .skill {
+      background: rgba(56, 189, 248, 0.08);
+      color: #67e8f9;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 12.5px;
+      font-weight: 600;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      transition: all 0.2s ease;
+    }
+
+    .skill:hover {
+      background: rgba(56, 189, 248, 0.18);
+      box-shadow: 0 0 14px rgba(56, 189, 248, 0.3);
+    }
+
+    .status-box {
+      background: rgba(0, 255, 200, 0.05);
+      border: 1px solid rgba(0, 255, 200, 0.25);
+      border-radius: 10px;
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      background: #00ffc8;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #00ffc8;
+      animation: pulse 1.6s infinite;
+      flex-shrink: 0;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    .status-text {
+      font-size: 13.5px;
+      color: #a7f3d0;
+      font-family: 'Consolas', 'Courier New', monospace;
+    }
+
+    .status-text b {
+      color: #00ffc8;
+      text-shadow: 0 0 8px rgba(0, 255, 200, 0.4);
+    }
+
+    footer {
+      margin-top: 32px;
+      text-align: center;
+      font-size: 11.5px;
+      color: #475569;
+      font-family: 'Consolas', 'Courier New', monospace;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <span class="badge">DevOps Engineer</span>
+    <h1>Waqas Saleem</h1>
+    <p class="subtitle">Automating infrastructure, one pipeline at a time.</p>
+
+    <div class="about">
+      My passion lies in Cloud &amp; DevOps — I work with Kubernetes, Docker,
+      Jenkins CI/CD, Ansible automation, and GitOps (Helm + Argo CD).
+      This page itself is part of that automated deployment pipeline,
+      generated using Ansible roles and Jinja2 templates.
+    </div>
+
+    <div class="skills">
+      <span class="skill">AWS EC2</span>
+      <span class="skill">Docker</span>
+      <span class="skill">Kubernetes</span>
+      <span class="skill">Ansible</span>
+      <span class="skill">Jenkins</span>
+      <span class="skill">Helm &amp; Argo CD</span>
+      <span class="skill">NGINX</span>
+      <span class="skill">MySQL</span>
+    </div>
+
+    <div class="status-box">
+      <span class="dot"></span>
+      <span class="status-text">
+        Database connected as <b>{{ mysql_user }}</b> to <b>myappdb</b>
+      </span>
+    </div>
+
+    <footer>Deployed via Ansible // Server: {{ inventory_hostname }}</footer>
+  </div>
+</body>
+</html>
